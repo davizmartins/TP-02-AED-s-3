@@ -183,35 +183,31 @@ As capturas abaixo devem ser inseridas no relatorio final entregue ao professor.
 
 ### Figura 1 - Menu inicial
 
-Inserir captura da tela inicial, com as opcoes de login, novo usuario, recuperacao de senha e sair.
+![](img/MenuInicial.png)
 
 ### Figura 2 - Menu principal apos login
 
-Inserir captura da tela exibida apos o login, com as opcoes de meus dados, meus cursos e minhas inscricoes.
+![](img/login.png)
 
 ### Figura 3 - Tela de minhas inscricoes
 
-Inserir captura da tela `Inicio > Minhas inscricoes`, mostrando os cursos em que o usuario esta inscrito e as opcoes de busca por codigo, busca por palavras-chave e listar todos os cursos.
+![](img/minhasInscricoes.png)
 
 ### Figura 4 - Lista de cursos disponiveis
 
-Inserir captura da listagem paginada de cursos de outros usuarios, exibindo ate 10 itens por pagina.
+![](img/cursosDisponiveis.png)
 
 ### Figura 5 - Detalhes de curso para inscricao
 
-Inserir captura da tela de detalhes de um curso encontrado por codigo ou pela listagem, com codigo, curso, autor, descricao, data de inicio e opcao de fazer inscricao.
+![](img/cursoDetalhes.png)
 
 ### Figura 6 - Meus cursos
 
-Inserir captura da tela com os cursos criados pelo usuario logado.
+![](img/meusCursos.png)
 
 ### Figura 7 - Gerenciamento de inscritos
 
-Inserir captura da tela que lista os inscritos em um curso, com opcao de exportar lista.
-
-### Figura 8 - Arquivo CSV exportado
-
-Inserir captura ou trecho do arquivo `TP02/inscritos.csv`, demonstrando a exportacao de nome e e-mail dos inscritos.
+![](img/gerenciamentoInscritos.png)
 
 ## Checklist obrigatorio
 

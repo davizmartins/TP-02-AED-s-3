@@ -183,31 +183,23 @@ Na visao de inscricoes, a listagem geral de cursos apresenta paginacao de 10 ite
 
 As capturas abaixo devem ser inseridas no relatorio final entregue ao professor. Elas foram escolhidas por mostrarem as funcionalidades principais do TP02.
 
-### Figura 1 - Menu inicial
-
-![](img/MenuInicial.png)
-
-### Figura 2 - Menu principal apos login
-
-![](img/login.png)
-
-### Figura 3 - Tela de minhas inscricoes
+### Figura 1 - Tela de minhas inscricoes
 
 ![](img/minhasInscricoes.png)
 
-### Figura 4 - Lista de cursos disponiveis
+### Figura 2 - Lista de cursos disponiveis
 
 ![](img/cursosDisponiveis.png)
 
-### Figura 5 - Detalhes de curso para inscricao
+### Figura 3 - Detalhes de curso para inscricao
 
 ![](img/cursoDetalhes.png)
 
-### Figura 6 - Meus cursos
+### Figura 4 - Meus cursos
 
 ![](img/meusCursos.png)
 
-### Figura 7 - Gerenciamento de inscritos
+### Figura 5 - Gerenciamento de inscritos
 
 ![](img/gerenciamentoInscritos.png)
 

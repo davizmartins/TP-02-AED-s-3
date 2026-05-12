@@ -10,12 +10,14 @@ import java.util.Scanner;
 
 public class VisaoInscritos {
     private Scanner scanner = new Scanner(System.in);
+    private static final DateTimeFormatter FORMATO_DATA = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
     /**
      * Mostra a lista de inscritos em um curso
      */
-    public void mostrarListaInscritos(Usuario[] inscritos, String nomeCurso) {
+    public void mostrarListaInscritos(Usuario[] inscritos, CursoUsuario[] inscricoes, String nomeCurso) {
         System.out.println("\n       EntrePares 1.0                  ");
+        System.out.println("========================================");
         System.out.println(" > Início > Meus Cursos > " + nomeCurso + " > Inscrições");
         System.out.println("");
 
@@ -23,11 +25,16 @@ public class VisaoInscritos {
             System.out.println(" Nenhum usuário inscrito neste curso.");
         } else {
             for (int i = 0; i < inscritos.length; i++) {
-                System.out.println("(" + (i + 1) + ") " + inscritos[i].getNome() + " (" + inscritos[i].getEmail() + ")");
+                String dataInscricao = "";
+                if (inscricoes != null && i < inscricoes.length && inscricoes[i] != null) {
+                    dataInscricao = " (" + inscricoes[i].getDataInscricao().format(FORMATO_DATA) + ")";
+                }
+                System.out.println("(" + (i + 1) + ") " + inscritos[i].getNome() + dataInscricao);
             }
         }
 
         System.out.println("");
+        System.out.println("----------------------------------------");
         System.out.println(" (A) Exportar lista");
         System.out.println(" (R) Retornar");
         System.out.print("Opção: ");
@@ -38,12 +45,14 @@ public class VisaoInscritos {
      */
     public void mostrarDetalheInscrito(Usuario usuario, String dataInscricao) {
         System.out.println("\n       EntrePares 1.0                  ");
+        System.out.println("========================================");
         System.out.println(" > Início > Meus Cursos > Inscrições > " + usuario.getNome());
         System.out.println("");
         System.out.println(" NOME.....: " + usuario.getNome());
         System.out.println(" E-MAIL...: " + usuario.getEmail());
         System.out.println(" INSCRITO.: " + dataInscricao);
         System.out.println("");
+        System.out.println("----------------------------------------");
         System.out.println(" (A) Cancelar inscrição deste usuário");
         System.out.println(" (R) Retornar");
         System.out.print("Opção: ");

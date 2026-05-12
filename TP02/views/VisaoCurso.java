@@ -12,11 +12,13 @@ import java.time.format.DateTimeFormatter;
 
 public class VisaoCurso {
     private Scanner scanner = new Scanner(System.in);
+    private static final DateTimeFormatter FORMATO_DATA = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
     // Exibe os cursos do usuário
     public void mostrarCursos(Curso[] cursos) {
         System.out.println("\n");
         System.out.println(" > Início > Meus Cursos                ");
+        System.out.println("========================================");
         System.out.println("");
         
         if (cursos.length == 0) {
@@ -27,11 +29,12 @@ public class VisaoCurso {
                 if (nome.length() > 28) {
                     nome = nome.substring(0, 25) + "...";
                 }
-                System.out.println(" (" + (i + 1) + ") " + nome + " - " + cursos[i].getDataInicio());
+                System.out.println(" (" + (i + 1) + ") " + nome + " - " + cursos[i].getDataInicio().format(FORMATO_DATA));
             }
         }
         
         System.out.println("");
+        System.out.println("----------------------------------------");
         System.out.println(" (A) Novo curso                        ");
         System.out.println(" (R) Retornar                          ");
         System.out.println("");
@@ -43,13 +46,15 @@ public class VisaoCurso {
         String estado = obterTextoEstado(curso.getEstado());
         System.out.println("\n");
         System.out.println(" > Início > Meus Cursos > " + curso.getNome());
+        System.out.println("========================================");
         System.out.println("");
         System.out.println(" CÓDIGO......: " + curso.getCodigoCompartilhavel());
         System.out.println(" NOME........: " + curso.getNome());
-        System.out.println(" DATA INÍCIO.: " + curso.getDataInicio());
+        System.out.println(" DATA INÍCIO.: " + curso.getDataInicio().format(FORMATO_DATA));
         System.out.println(" ESTADO......: " + estado);
         System.out.println(" DESCRIÇÃO...: " + curso.getDescricao());
         System.out.println("");
+        System.out.println("----------------------------------------");
         System.out.println(" (A) Gerenciar inscritos               ");
         System.out.println(" (B) Corrigir dados                    ");
         System.out.println(" (C) Alterar data do curso             ");
@@ -65,6 +70,7 @@ public class VisaoCurso {
     public Curso pegarDadosNovoCurso() {
         System.out.println("\n");
         System.out.println("--- Novo Curso ---");
+        System.out.println("========================================");
         System.out.println("");
         System.out.print("Nome do curso: ");
         String nome = scanner.nextLine();
@@ -85,6 +91,7 @@ public class VisaoCurso {
     public Curso pegarDadosAtualizacaoCurso(Curso cursoAtual) {
         System.out.println("\n");
         System.out.println("--- Atualizar Curso ---");
+        System.out.println("========================================");
         System.out.println("");
         System.out.print("Novo nome (atual: " + cursoAtual.getNome() + "): ");
         String novoNome = scanner.nextLine();
@@ -105,7 +112,8 @@ public class VisaoCurso {
     public LocalDate pegarNovaDataCurso(LocalDate dataAtual) {
         System.out.println("\n");
         System.out.println("--- Alterar Data do Curso ---");
-        System.out.println("Data atual: " + dataAtual);
+        System.out.println("========================================");
+        System.out.println("Data atual: " + dataAtual.format(FORMATO_DATA));
         System.out.println("");
         
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");

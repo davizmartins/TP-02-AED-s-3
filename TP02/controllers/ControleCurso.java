@@ -183,7 +183,7 @@ public class ControleCurso {
                 ArrayList<CursoUsuario> inscricoes = controleInscricao.getArquivoInscricao().readByCurso(curso.getId());
 
                 if (inscricoes == null || inscricoes.isEmpty()) {
-                    visaoInscritos.mostrarListaInscritos(null, curso.getNome());
+                    visaoInscritos.mostrarListaInscritos(null, null, curso.getNome());
                     char opcao = visaoInscritos.pegarOpcao();
                     if (opcao == 'R' || opcao == 'A') {
                         return;
@@ -210,7 +210,7 @@ public class ControleCurso {
                 CursoUsuario[] inscricoesSalvas = inscricoesValidas.toArray(new CursoUsuario[0]);
 
                 if (usuarios.length == 0) {
-                    visaoInscritos.mostrarListaInscritos(null, curso.getNome());
+                    visaoInscritos.mostrarListaInscritos(null, null, curso.getNome());
                     char opcao = visaoInscritos.pegarOpcao();
                     if (opcao == 'R' || opcao == 'A') {
                         return;
@@ -218,7 +218,7 @@ public class ControleCurso {
                     continue;
                 }
 
-                visaoInscritos.mostrarListaInscritos(usuarios, curso.getNome());
+                visaoInscritos.mostrarListaInscritos(usuarios, inscricoesSalvas, curso.getNome());
                 char opcao = visaoInscritos.pegarOpcao();
 
                 if (opcao == 'A') {
@@ -245,7 +245,7 @@ public class ControleCurso {
     // Ver detalhes de um inscrito
     private void verDetalhesInscrito(Usuario usuario, CursoUsuario inscricao, Curso curso) {
         try {
-            visaoInscritos.mostrarDetalheInscrito(usuario, inscricao.getDataInscricao().toString());
+            visaoInscritos.mostrarDetalheInscrito(usuario, inscricao.getDataInscricao().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")));
             char opcao = visaoInscritos.pegarOpcao();
 
             if (opcao == 'A') {

@@ -15,11 +15,13 @@ public class VisaoUsuario {
     public void mostrarMenuPrincipal() {
         System.out.println("\n");
         System.out.println("       EntrePares 1.0 - Login          ");
+        System.out.println("========================================");
         System.out.println("");
         System.out.println(" (A) Login                             ");
         System.out.println(" (B) Novo usuário                      ");
         System.out.println(" (C) Recuperar senha                   ");
         System.out.println(" (S) Sair                              ");
+        System.out.println("----------------------------------------");
         System.out.println("");
         System.out.print("Opção: ");
     }
@@ -28,12 +30,14 @@ public class VisaoUsuario {
     public void mostrarMenuPrincipal(Usuario usuarioAtivo) {
         System.out.println("\n");
         System.out.println("       EntrePares 1.0                  ");
+        System.out.println("========================================");
         System.out.println(" > Início                              ");
         System.out.println("");
         System.out.println(" (A) Meus dados                        ");
         System.out.println(" (B) Meus cursos                       ");
         System.out.println(" (C) Minhas inscrições                 ");
         System.out.println(" (S) Sair/Logout                       ");
+        System.out.println("----------------------------------------");
         System.out.println("");
         System.out.print("Opção: ");
     }
@@ -42,11 +46,13 @@ public class VisaoUsuario {
     public void mostrarMenuMeusDados(Usuario usuarioAtivo) {
         System.out.println("\n");
         System.out.println("       EntrePares 1.0                  ");
+        System.out.println("========================================");
         System.out.println(" > Início > Meus Dados                ");
         System.out.println("");
         System.out.println(" Nome.....: " + usuarioAtivo.getNome());
         System.out.println(" E-mail...: " + usuarioAtivo.getEmail());
         System.out.println("");
+        System.out.println("----------------------------------------");
         System.out.println(" (A) Editar nome                       ");
         System.out.println(" (B) Editar e-mail                     ");
         System.out.println(" (C) Alterar senha                     ");
@@ -60,6 +66,7 @@ public class VisaoUsuario {
     public String[] pegarDadosLogin() {
         System.out.println("\n");
         System.out.println("--- Login ---");
+        System.out.println("========================================");
         System.out.println("");
         System.out.print("E-mail: ");
         String email = scanner.nextLine();
@@ -72,6 +79,7 @@ public class VisaoUsuario {
     public String[] pegarDadosRecuperacaoSenha() {
         System.out.println("\n");
         System.out.println("--- Recuperação de Senha ---");
+        System.out.println("========================================");
         System.out.println("");
         System.out.print("E-mail: ");
         String email = scanner.nextLine();
@@ -106,6 +114,7 @@ public class VisaoUsuario {
     public String[] pegarDadosAlteracaoSenha() {
         System.out.println("\n");
         System.out.println("--- Alterar Senha ---");
+        System.out.println("========================================");
         System.out.println("");
         System.out.print("Senha atual: ");
         String senhaAtual = scanner.nextLine();
@@ -119,6 +128,7 @@ public class VisaoUsuario {
     // Pega dados de novo usuário
     public Usuario pegarDadosNovoUsuario() {
         System.out.println("\n--- Cadastro de Novo Usuário ---");
+        System.out.println("========================================");
         System.out.print("Nome: ");
         String nome = scanner.nextLine();
         System.out.print("E-mail: ");
@@ -139,6 +149,7 @@ public class VisaoUsuario {
     // Mostra dados do usuário
     public void mostrarDadosUsuario(Usuario usuario) {
         System.out.println("> Início > Meus Dados                 ");
+        System.out.println("========================================");
         System.out.println("NOME.....: " + usuario.getNome());
         System.out.println("E-MAIL...: " + usuario.getEmail());
         System.out.println("PERGUNTA.: " + usuario.getPerguntaSecreta());

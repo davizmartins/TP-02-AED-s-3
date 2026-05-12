@@ -1,5 +1,7 @@
 # Relatorio do Trabalho Pratico 02 - AEDS III
 
+Link do Video Da Plataforma no Youtube: [TP01-AEDS 3](https://youtu.be/JTHIV_Fhdbs) 
+
 ## Participantes
 
 - Davi Rafael de Oliveira Gurgel Martins:
